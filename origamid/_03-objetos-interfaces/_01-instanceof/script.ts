@@ -1,48 +1,48 @@
-class Produto {
-  nome: string;
+const link = window.document.getElementById('origamid');
+if (link instanceof HTMLAnchorElement) link.href = link.href.replace('http://', 'https://');
 
-  constructor(nome: string) {
-    this.nome = nome;
-  }
-  // precoReal() {
-  //   return `R$ ${this.preco}`;
-  // }
-}
+// class Produto {
+//   nome: string;
 
-const livro = new Produto('A Guerra dos Tronos');
-console.log(livro instanceof Produto);
+//   constructor(nome: string) {
+//     this.nome = nome;
+//   }
+// }
 
-class Livro extends Produto {
-  autor: string;
-  constructor(nome: string, autor: string) {
-    super(nome);
-    this.autor = autor;
-  }
-}
+// const livro = new Produto('A Guerra dos Tronos');
+// console.log(livro instanceof Produto);
 
-class Jogo extends Produto {
-  jogadores: number;
-  constructor(nome: string, jogadores: number) {
-    super(nome);
-    this.jogadores = jogadores;
-  }
-}
+// class Livro extends Produto {
+//   autor: string;
+//   constructor(nome: string, autor: string) {
+//     super(nome);
+//     this.autor = autor;
+//   }
+// }
 
-function buscarProduto(busca: string) {
-  if (busca === 'O Hobbit') return new Livro('J. R. R. Tolkien', 'tolkien');
-  else if (busca === 'Dark Souls') return new Jogo('Dark Souls', 1);
-  else return null;
-}
+// class Jogo extends Produto {
+//   jogadores: number;
+//   constructor(nome: string, jogadores: number) {
+//     super(nome);
+//     this.jogadores = jogadores;
+//   }
+// }
 
-const produto = buscarProduto('O Hobbit');
-if (produto instanceof Livro) {
-  console.log(produto.autor);
-}
+// function buscarProduto(busca: string) {
+//   if (busca === 'O Hobbit') return new Livro('J. R. R. Tolkien', 'tolkien');
+//   else if (busca === 'Dark Souls') return new Jogo('Dark Souls', 1);
+//   else return null;
+// }
 
-if (produto instanceof Jogo) {
-  console.log(produto.jogadores);
-}
+// const produto = buscarProduto('O Hobbit');
+// if (produto instanceof Livro) {
+//   console.log(produto.autor);
+// }
 
-if(produto instanceof Produto) {
-  console.log(produto.nome)
-}
+// if (produto instanceof Jogo) {
+//   console.log(produto.jogadores);
+// }
+
+// if(produto instanceof Produto) {
+//   console.log(produto.nome);
+// }
